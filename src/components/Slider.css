@@ -1,0 +1,181 @@
+/* src/components/Slider.css */
+.slider-container {
+  width: 100%;
+  max-width: 1600px; /* Tăng chiều rộng tối đa cho cảm giác hoành tráng */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slide */
+.slide {
+  width: 100%;
+  height: 600px; /* Tăng chiều cao cho ấn tượng hơn */
+  position: relative;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(70%); /* Làm tối ảnh nền để nổi bật text */
+  transition: transform 0.5s ease; /* Hiệu ứng zoom nhẹ khi chuyển */
+}
+
+.slick-active .slide img {
+  transform: scale(1.05); /* Zoom nhẹ khi slide active */
+}
+
+/* Nội dung trên slide */
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  padding: 1rem;
+  animation: fadeIn 1s ease-in-out; /* Hiệu ứng xuất hiện */
+}
+
+.slide-content h2 {
+  font-size: 3rem; /* Tiêu đề lớn hơn */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Đổ bóng cho chữ */
+}
+
+.slide-content p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Dots */
+.slick-dots {
+  bottom: 30px;
+}
+
+.slick-dots li {
+  margin: 0 8px;
+}
+
+.slick-dots li button:before {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #d66f8d;
+  opacity: 1;
+  font-size: 16px; /* Dots active lớn hơn */
+}
+
+/* Mũi tên */
+.slick-prev,
+.slick-next {
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+  transition: opacity 0.3s ease;
+}
+
+.slick-prev {
+  left: 30px;
+}
+
+.slick-next {
+  right: 30px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;
+  color: #fff;
+  opacity: 0.8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1;
+  color: #d66f8d; /* Màu hồng khi hover */
+}
+
+/* Hiệu ứng fade */
+.slick-slide {
+  transition: opacity 0.8s ease;
+}
+
+.slick-slide:not(.slick-active) {
+  opacity: 0;
+}
+
+/* Animation cho text */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translate(-50%, -60%); }
+  100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .slide {
+    height: 450px;
+  }
+
+  .slide-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .slide-content p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    height: 350px;
+  }
+
+  .slide-content h2 {
+    font-size: 2rem;
+  }
+
+  .slide-content p {
+    font-size: 1rem;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 30px;
+  }
+
+  .slick-dots {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    height: 250px;
+  }
+
+  .slide-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .slide-content p {
+    font-size: 0.9rem;
+  }
+}

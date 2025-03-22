@@ -1,0 +1,199 @@
+/* Footer.css */
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  padding: 0 40px;
+  color: #555;
+  border-top: 5px solid #d66f8d; /* Viền đỏ 5px phía trên */
+
+}
+
+/* Footer Top */
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 2rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footer-title {
+  font-weight: bold;
+  margin: 2.5rem 0 1.25rem;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  color: #666;
+}
+
+.footer-list li {
+  margin-bottom: 12px;
+}
+
+.footer-list a {
+  color: #666;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer-list a:hover {
+  color: #ee4d2d; /* Màu cam đặc trưng của Shopee */
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Payment & Shipping */
+.payment-list,
+.shipping-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.payment-list li img,
+.shipping-list li img {
+  width: 40px;
+  height: auto;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* App Download */
+.app-download {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.qr-code {
+  width: 80px;
+  height: 80px;
+}
+
+.app-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app-icon {
+  width: 80px;
+  height: auto;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* Footer Middle */
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 0;
+  color: #999;
+}
+
+.countries span {
+  margin-right: 8px;
+}
+
+.countries span:not(:last-child)::after {
+  content: '|';
+  margin-left: 8px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  padding: 2rem 0;
+  color: #666;
+}
+
+.policies {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 1.5rem;
+}
+
+.policies span:not(:last-child)::after {
+  content: '|';
+  margin-left: 24px;
+  color: #bbb;
+}
+
+.certification img {
+  width: 120px;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.company-info p {
+  margin: 8px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-top {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+  }
+
+  .footer-middle {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+  }
+
+  .policies {
+      flex-direction: column;
+      gap: 12px;
+  }
+
+  .policies span::after {
+      content: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+      padding: 0 20px;
+  }
+
+  .footer-top {
+      grid-template-columns: 1fr;
+  }
+
+  .app-download {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+
+  .app-links {
+      flex-direction: row;
+      justify-content: center;
+  }
+}
