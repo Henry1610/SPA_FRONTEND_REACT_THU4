@@ -1,0 +1,152 @@
+/* Tổng thể section */
+.expert-advice-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Tiêu đề lớn */
+  .section-title {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  /* Đoạn văn mô tả */
+  .section-description {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  /* Grid lời khuyên */
+  .advice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  /* Mỗi item lời khuyên */
+  .advice-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .advice-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Hình ảnh lời khuyên */
+  .advice-image {
+    width: 100%;
+    height: 200px; /* Chiều cao ảnh, bạn có thể điều chỉnh */
+    object-fit: cover;
+  }
+  
+  /* Tiêu đề lời khuyên */
+  .advice-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 15px 10px;
+    text-align: left;
+  }
+  
+  /* Nội dung lời khuyên */
+  .advice-item p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+    margin: 0 15px 15px;
+    text-align: left;
+  }
+  /* Tổng thể section */
+.long-description-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Tiêu đề lớn */
+  .section-title {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Đoạn văn mô tả dài */
+  .long-description {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6; /* Khoảng cách dòng lớn hơn để dễ đọc */
+    margin-bottom: 30px;
+    max-width: 800px; /* Giới hạn chiều rộng để không quá lan man */
+    background-color: #f9f9f9; /* Nền nhẹ để nổi bật */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Bóng đổ nhẹ */
+  }
+  
+  /* Responsive cho màn hình nhỏ */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 24px;
+      margin-left: 10px;
+    }
+  
+    .long-description {
+      font-size: 14px;
+      margin-left: 10px;
+      padding: 15px;
+      max-width: 100%; /* Mở rộng toàn màn hình trên mobile */
+    }
+  }
+  /* Responsive cho màn hình nhỏ */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 24px;
+      margin-left: 10px;
+    }
+  
+    .section-description {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  
+    .advice-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      padding: 0 10px;
+    }
+  
+    .advice-item h3 {
+      font-size: 16px;
+    }
+  
+    .advice-item p {
+      font-size: 13px;
+    }
+  
+    .advice-image {
+      height: 150px; /* Giảm chiều cao ảnh cho màn hình nhỏ */
+    }
+  }

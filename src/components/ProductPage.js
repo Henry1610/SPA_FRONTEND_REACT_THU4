@@ -13,6 +13,21 @@ const ProductPage = () => {
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // Hàm định dạng giá tiền với dấu phân cách hàng nghìn
+  const formatPrice = (price) => {
+    if (price === undefined || price === null) {
+      return "Giá không xác định";
+    }
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " VNĐ";
+  };
+
+  // Hàm xử lý khi nhấn nút đặt hàng
+  const handleOrder = (product) => {
+    // Ở đây bạn có thể thêm logic xử lý đặt hàng
+    // Ví dụ: thêm vào giỏ hàng, chuyển hướng đến trang đặt hàng, v.v.
+    alert(`Đã thêm ${product.name} vào giỏ hàng!`);
+  };
+
   return (
     <div className="product-page">
       <h1>SẢN PHẨM NỔI BẬT</h1>
@@ -21,9 +36,9 @@ const ProductPage = () => {
       <div className="filter-container">
         <select onChange={(e) => setCategory(e.target.value)} value={category}>
           <option value="">Tất cả danh mục</option>
-          <option value="electronics">Điện tử</option>
-          <option value="clothing">Thời trang</option>
-          <option value="accessories">Phụ kiện</option>
+          <option value="electronics">Kem chống nắng</option>
+          <option value="clothing">Trị mụn</option>
+          <option value="accessories">Khử mùi</option>
         </select>
 
         <input
@@ -44,6 +59,13 @@ const ProductPage = () => {
               </Link>
               <h3>{product.name}</h3>
               <p>{product.shortDescription}</p>
+              <p className="product-price">{formatPrice(product.price)}</p>
+              <button 
+                className="order-button"
+                onClick={() => handleOrder(product)}
+              >
+                Đặt hàng
+              </button>
             </div>
           ))
         ) : (

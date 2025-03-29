@@ -24,9 +24,9 @@ const Footer = () => {
             </div>
 
             <div class="footer-column">
-                <h3 class="footer-title">SHOPEE VIỆT NAM</h3>
+                <h3 class="footer-title">QUEEN SPA VIỆT NAM</h3>
                 <ul class="footer-list">
-                    <li>Về Shopee</li>
+                    <li>Về SPA</li>
                     <li>Tuyển Dụng</li>
                     <li>Điều Khoản Shopee</li>
                     <li>Chính Sách Bảo Mật</li>
@@ -68,7 +68,7 @@ const Footer = () => {
             </div>
 
             <div class="footer-column">
-                <h3 class="footer-title">THEO DÕI SHOPEE</h3>
+                <h3 class="footer-title">THEO DÕI SPA</h3>
                 <ul class="footer-list social-links">
                     <li>
                         <a href="#" class="flex">
@@ -92,7 +92,7 @@ const Footer = () => {
             </div>
 
             <div class="footer-column">
-                <h3 class="footer-title">TẢI ỨNG DỤNG SHOPEE</h3>
+                <h3 class="footer-title">TẢI ỨNG DỤNG SPA</h3>
                 <div class="app-download">
                     <a href="#"><img src="https://down-vn.img.susercontent.com/file/a5e589e8e118e937dc660f224b9a1472" alt="QR Code" class="qr-code"/></a>
                     <div class="app-links">

@@ -28,7 +28,12 @@
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
+.product-price {
+  color: #e91e63;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 1.1em;
+}
 /* Lưới sản phẩm */
 .products-grid {
   display: grid;
@@ -65,7 +70,28 @@
   margin: 10px 0;
   color: #222;
 }
+.product-price {
+  color: #e91e63;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 1.1em;
+}
 
+.order-button {
+  background-color: #d66f8d; 
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.order-button:hover {
+  background-color: gray; /* Màu xanh đậm hơn khi hover */
+}
 /* Mô tả sản phẩm */
 .product-card p {
   font-size: 14px;

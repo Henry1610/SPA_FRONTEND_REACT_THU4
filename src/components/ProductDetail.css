@@ -1,13 +1,143 @@
-/* src/components/ProductDetail.css */
 .product-detail {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .product-detail-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
-  }
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.product-detail-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.product-image-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.product-detail-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-info-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.product-short-desc {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.price-section {
+  margin: 20px 0;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+  font-size: 1.1em;
+}
+
+.discounted-price {
+  color: #e91e63;
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-right: 10px;
+}
+
+.discount-label {
+  color: #fff;
+  background-color: #ff4444;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.9em;
+}
+
+.quantity-section {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-control button {
+  width: 30px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.quantity-control button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.quantity-control span {
+  min-width: 30px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.order-button {
+  background-color: #d66f8d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 200px;
+}
+
+.order-button:hover {
+  background-color: gray;
+}
+
+.additional-info {
+  margin-top: 30px;
+}
+
+.additional-info h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-features {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #666;
+}
+
+.product-features li {
+  margin: 5px 0;
+}
+
+.not-found {
+  text-align: center;
+  padding: 20px;
+  color: #ff4444;
+}

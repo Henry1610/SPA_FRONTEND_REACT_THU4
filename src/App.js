@@ -9,6 +9,8 @@ import ProductPage from "./components/ProductPage";
 import ProductDetail from "./components/ProductDetail";
 import "./App.css"; 
 import { useState } from "react";
+import ExpertAdviceSection from "./components/ExpertAdviceSection";
+import BrandPage from "./components/BrandPage";
 
 function App() {
   // Khởi tạo isAuthenticated từ localStorage, mặc định là false nếu không có giá trị
@@ -99,8 +101,17 @@ function App() {
           }
         />
         {/* Các route khác */}
-        <Route path="/advice" element={<div>Lời Khuyên Của Chuyên Gia</div>} />
-        <Route path="/brand" element={<div>Thương Hiệu Của Chúng Tôi</div>} />
+        <Route path="/advice" element={<>
+          <Header onLogout={handleLogout} />
+          <ExpertAdviceSection/>
+          <Footer/>
+          
+          </>} />
+        <Route path="/brand" element={<>
+          <Header onLogout={handleLogout} />
+        <BrandPage/>
+        <Footer/>
+        </>} />
       </Routes>
     </Router>
   );
