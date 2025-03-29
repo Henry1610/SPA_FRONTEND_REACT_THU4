@@ -21,7 +21,6 @@
 }
 
 .product-item {
-  display: flex;
   align-items: center;
   background-color: #f3f4f6;
   padding: 8px; /* Giảm padding từ 12px xuống 8px */

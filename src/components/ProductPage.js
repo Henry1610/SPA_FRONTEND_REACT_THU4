@@ -55,7 +55,7 @@ const ProductPage = () => {
           filteredProducts.map((product) => (
             <div key={product.id} className="product-card">
               <Link to={`/product/${product.id}`}>
-                <img src={product.image} alt={product.name} className="product-image" />
+                <img src={product.image} alt={product.name} className="product-imagee" />
               </Link>
               <h3>{product.name}</h3>
               <p>{product.shortDescription}</p>
