@@ -44,10 +44,10 @@ const Login = ({ onLogin }) => {
           <button type="submit">Đăng nhập</button>
           {error && <p className="error">{error}</p>}
         </form>
-        <div className="login-info">
+        {/* <div className="login-info">
           <p>Tài khoản admin: admin / admin123</p>
           <p>Tài khoản thường: user / 123456</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,8 +1,18 @@
 import React from "react";
 import { FaTh, FaChartBar, FaFileInvoice, FaCalendar, FaEnvelope, FaBell, FaCog, FaSignInAlt, FaUserPlus } from "react-icons/fa";
 import "./css/Sidebar.css";
+import { useNavigate } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ onLogout }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    if (onLogout) {
+      onLogout();
+      navigate("/login");
+    }
+  };
+
   return (
     <div className="sidebar">
       <div className="sidebar-logo">
@@ -24,11 +34,11 @@ const Sidebar = () => {
         <FaCog className="sidebar-icon" size={24} />
       </div>
       <div className="sidebar-footer">
-        <FaSignInAlt className="sidebar-icon" size={24} />
+        <FaSignInAlt className="sidebar-icon" size={24} onClick={handleLogout} style={{ cursor: 'pointer' }} />
         <FaUserPlus className="sidebar-icon" size={24} />
       </div>
     </div>
   );
 };
 
-export default Sidebar;
+export default Sidebar; 

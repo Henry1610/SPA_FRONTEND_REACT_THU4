@@ -8,11 +8,11 @@ import RecentOrdersTable from "./RecentOrdersTable";
 import TopSellingProducts from "./TopSellingProducts";
 import "./css/AppAdmin.css";
 
-function AppAdmin() {
+function AppAdmin({ onLogout }) {
   return (
     <div className="app-admin">
       {/* Sidebar */}
-      <Sidebar />
+      <Sidebar onLogout={onLogout} />
 
       {/* Main Content */}
       <div className="main-content">
