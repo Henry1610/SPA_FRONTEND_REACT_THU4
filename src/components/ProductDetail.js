@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { products } from '../data/products';
-import './ProductDetail.css';
+import './css/ProductDetail.css';
 
 const ProductDetail = () => {
   const { id } = useParams();

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { products } from '../data/products';
-import './ProductPage.css';
+import './css/ProductPage.css';
 
 const ProductPage = () => {
   const [category, setCategory] = useState('');

@@ -1,6 +1,6 @@
 // src/components/BrandPage.js
 import React from 'react';
-import './BrandPage.css';
+import './css/BrandPage.css';
 
 const BrandPage = () => {
   return (

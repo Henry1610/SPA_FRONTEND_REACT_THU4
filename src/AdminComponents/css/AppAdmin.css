@@ -1,0 +1,41 @@
+.app-admin {
+  display: flex;
+  height: 100vh;
+  background-color: #f9e6eb; /* Màu nền nhạt dựa trên #b54b67 */
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+}
+
+.dashboard-content {
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.charts-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.tables-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.recent-orders {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.top-selling {
+  max-height: 400px;
+}

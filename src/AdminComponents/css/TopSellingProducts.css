@@ -1,0 +1,58 @@
+.top-selling-products {
+  background-color: #ffffff;
+  padding: 16px; /* Giảm padding từ 24px xuống 16px */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 400px; /* Giữ nguyên chiều cao tối đa */
+  overflow-y: auto; /* Thêm thanh cuộn dọc nếu danh sách dài */
+}
+
+.section-title {
+  font-size: 16px; /* Giảm font từ 18px xuống 16px */
+  font-weight: 600;
+  margin-bottom: 12px; /* Giảm margin từ 16px xuống 12px */
+  color: #374151;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Giảm khoảng cách giữa các sản phẩm từ 16px xuống 8px */
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  padding: 8px; /* Giảm padding từ 12px xuống 8px */
+  border-radius: 6px; /* Giảm bo góc từ 8px xuống 6px */
+  transition: background-color 0.3s ease;
+}
+
+.product-item:hover {
+  background-color: #e5e7eb;
+}
+
+.product-image {
+  width: 40px; /* Giảm kích thước hình ảnh từ 60px xuống 40px */
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px; /* Giảm bo góc từ 8px xuống 6px */
+  margin-right: 8px; /* Giảm margin từ 12px xuống 8px */
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-name {
+  color: #374151;
+  font-size: 12px; /* Giảm font từ 14px xuống 12px */
+  font-weight: 500;
+  margin-bottom: 2px; /* Giảm margin từ 4px xuống 2px */
+}
+
+.product-price {
+  color: #6b7280;
+  font-size: 10px; /* Giảm font từ 12px xuống 10px */
+}

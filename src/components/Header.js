@@ -1,7 +1,7 @@
 // src/components/Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css';
+import './css/Header.css';
 
 const Header = ({ onLogout }) => {
   const isAuthenticated = JSON.parse(localStorage.getItem('isAuthenticated')) || false;

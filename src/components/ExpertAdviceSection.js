@@ -1,5 +1,5 @@
 import React from 'react';
-import './ExpertAdviceSection.css';
+import './css/ExpertAdviceSection.css';
 
 const ExpertAdviceSection = () => {
   return (

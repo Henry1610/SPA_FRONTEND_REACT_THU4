@@ -1,0 +1,68 @@
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-search {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.search-input {
+  padding: 8px 12px 8px 36px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #b54b67; /* Màu viền khi focus */
+  box-shadow: 0 0 0 2px rgba(181, 75, 103, 0.3); /* Hiệu ứng focus */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.flag-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.notification-wrapper {
+  position: relative;
+}
+
+.notification-icon {
+  color: #b54b67; /* Màu biểu tượng thông báo */
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

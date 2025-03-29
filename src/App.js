@@ -11,9 +11,10 @@ import "./App.css";
 import { useState } from "react";
 import ExpertAdviceSection from "./components/ExpertAdviceSection";
 import BrandPage from "./components/BrandPage";
+import AppAdmin from "./AdminComponents/AppAdmin";
 
 function App() {
-  // Khởi tạo isAuthenticated từ localStorage, mặc định là false nếu không có giá trị
+  // Khởi tạo isAuthenticated và isAdmin từ localStorage
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     const storedAuth = localStorage.getItem('isAuthenticated');
     // Kiểm tra nếu storedAuth tồn tại và là JSON hợp lệ
@@ -25,19 +26,33 @@ function App() {
     }
   });
 
-  // Đồng bộ trạng thái với localStorage khi isAuthenticated thay đổi
+  const [isAdmin, setIsAdmin] = useState(() => {
+    const storedAdmin = localStorage.getItem('isAdmin');
+    // Kiểm tra nếu storedAdmin tồn tại và là JSON hợp lệ
+    try {
+      return storedAdmin !== null ? JSON.parse(storedAdmin) : false;
+    } catch (e) {
+      console.error("Lỗi parse localStorage:", e);
+      return false; // Trả về false nếu parse thất bại
+    }
+  });
+
+  // Đồng bộ trạng thái với localStorage khi isAuthenticated và isAdmin thay đổi
   useEffect(() => {
     localStorage.setItem('isAuthenticated', JSON.stringify(isAuthenticated));
-  }, [isAuthenticated]);
+    localStorage.setItem('isAdmin', JSON.stringify(isAdmin));
+  }, [isAuthenticated, isAdmin]);
 
   // Hàm xử lý khi đăng nhập thành công
-  const handleLogin = () => {
-    setIsAuthenticated(true); // Chuyển sang trạng thái đã đăng nhập
+  const handleLogin = (isAdminUser) => {
+    setIsAuthenticated(true);
+    setIsAdmin(isAdminUser);
   };
 
   // Hàm xử lý khi đăng xuất
   const handleLogout = () => {
-    setIsAuthenticated(false); // Chuyển về trạng thái chưa đăng nhập
+    setIsAuthenticated(false);
+    setIsAdmin(false);
   };
 
   return (
@@ -48,9 +63,20 @@ function App() {
           path="/login"
           element={
             isAuthenticated ? (
-              <Navigate to="/" />
+              <Navigate to={isAdmin ? "/admin" : "/"} />
             ) : (
               <Login onLogin={handleLogin} />
+            )
+          }
+        />
+        {/* Trang Admin */}
+        <Route
+          path="/admin"
+          element={
+            isAuthenticated && isAdmin ? (
+              <AppAdmin onLogout={handleLogout} />
+            ) : (
+              <Navigate to="/login" />
             )
           }
         />
@@ -105,12 +131,11 @@ function App() {
           <Header onLogout={handleLogout} />
           <ExpertAdviceSection/>
           <Footer/>
-          
-          </>} />
+        </>} />
         <Route path="/brand" element={<>
           <Header onLogout={handleLogout} />
-        <BrandPage/>
-        <Footer/>
+          <BrandPage/>
+          <Footer/>
         </>} />
       </Routes>
     </Router>

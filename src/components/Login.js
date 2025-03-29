@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Login.css"; // Import CSS
+import "./css/Login.css"; // Import CSS
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState("");
@@ -9,9 +9,15 @@ const Login = ({ onLogin }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (username === "admin" && password === "123456") {
-      onLogin(); // Gọi hàm để chuyển hướng đến trang sản phẩm
-    } else {
+    // Kiểm tra đăng nhập admin
+    if (username === "admin" && password === "admin123") {
+      onLogin(true); // Đăng nhập với quyền admin
+    } 
+    // Kiểm tra đăng nhập thường
+    else if (username === "user" && password === "123456") {
+      onLogin(false); // Đăng nhập không có quyền admin
+    } 
+    else {
       setError("Tên đăng nhập hoặc mật khẩu không đúng!");
     }
   };
@@ -38,10 +44,13 @@ const Login = ({ onLogin }) => {
           <button type="submit">Đăng nhập</button>
           {error && <p className="error">{error}</p>}
         </form>
+        <div className="login-info">
+          <p>Tài khoản admin: admin / admin123</p>
+          <p>Tài khoản thường: user / 123456</p>
+        </div>
       </div>
     </div>
   );
 };
-
 
 export default Login;

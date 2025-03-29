@@ -1,0 +1,80 @@
+.sidebar {
+  width: 80px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  fill: #b54b67; /* Màu logo */
+}
+
+.logo-text {
+  color: #b54b67; /* Màu chữ "Base" */
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 8px;
+  padding-left: 10px;
+}
+
+.sidebar-menu {
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-icon {
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sidebar-icon:hover {
+  color: #b54b67; /* Màu khi hover */
+}
+
+.sidebar-icon.active {
+  color: #b54b67; /* Màu biểu tượng được chọn */
+  background-color: #f9e6eb; /* Nền nhạt dựa trên #b54b67 */
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.sidebar-icon-wrapper {
+  position: relative;
+}
+
+.sidebar-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

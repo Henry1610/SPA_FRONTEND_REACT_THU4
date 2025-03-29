@@ -1,0 +1,67 @@
+.analytics-chart {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #b54b67; /* Màu tiêu đề */
+}
+
+.chart-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-center {
+  position: absolute;
+  text-align: center;
+}
+
+.chart-percentage {
+  font-size: 24px;
+  font-weight: bold;
+  color: #b54b67; /* Màu phần trăm */
+}
+
+.chart-label {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.legend-color.sale {
+  background-color: #b54b67; /* Màu "Sale" */
+}
+
+.legend-color.distribute {
+  background-color: #d17a8f; /* Màu nhạt hơn dựa trên #b54b67 */
+}
+
+.legend-color.return {
+  background-color: #e5a3b2; /* Màu nhạt hơn nữa */
+}
